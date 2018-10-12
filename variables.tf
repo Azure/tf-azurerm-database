@@ -12,8 +12,13 @@ variable "server_version" {
   default     = "12.0"
 }
 
-variable "db_name" {
-  description = "The name of the database to be created."
+variable "server_name" {
+  description = "Specifies the name of the SQL DB Server. Changing this forces a new resource to be created."
+}
+
+variable "db_names" {
+  description = "The list of names of the database to be created."
+  default     = []
 }
 
 variable "db_edition" {
